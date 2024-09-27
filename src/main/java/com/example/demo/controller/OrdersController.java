@@ -26,6 +26,6 @@ public class OrdersController {
 	@PostMapping("/orders/insert")
 	public String insertSubmit(Orders orders) {
 		dao.save(orders);
-		return "redirect:/orders/list";
+		return "redirect:/orders/list"; 
 	}
 }
