@@ -60,8 +60,8 @@ jobs:
             # Docker 이미지 풀
             docker pull ${{ secrets.DOCKER_USER }}/ordersService:latest
             # 기존 컨테이너 중지 및 제거
-            docker stop book_service || true
-            docker rm book_service || true
+            docker stop ordersService || true
+            docker rm ordersService || true
             # 새로운 컨테이너 실행
             docker run -d -p 8083:8083 --name ordersService --network=mynet \
               -e DB_URL=${{ secrets.DB_URL }} \
