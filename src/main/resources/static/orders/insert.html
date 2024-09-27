@@ -10,7 +10,7 @@
     		// 도서명, 도서번호 출력
     		$.ajax({
     			//url:"http://localhost:8080/book/list",
-    			url:"http://localhost:8081/book/list",
+    			url:"http://52.78.136.242:8080/book/list",
     			success:function(res){
     				$.each(res, function(){
     					let row = $("<option></option>").html(this.bookname).attr("value",this.bookid);
@@ -22,7 +22,7 @@
     		//고객명, 고객번호 출력
     		$.ajax({
     			//url:"http://localhost:8080/customer/list",
-    			url:"http://localhost:8082/customer/list",
+    			url:"http://52.78.136.242:8080/customer/list",
     			success:function(res){
     				$.each(res, function(){
     					let row = $("<option></option>").html(this.name).attr("value",this.custid);
